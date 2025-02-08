@@ -1,0 +1,18 @@
+name: "Tweeter"
+
+services:
+    web:
+        build:
+            context: .
+            target: web
+        ports:
+            - "5173:5173"
+        restart: always
+
+    api:
+        build:
+            context: .
+            target: api
+        ports:
+            - "3000:3000"
+        restart: always
