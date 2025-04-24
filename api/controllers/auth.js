@@ -8,7 +8,7 @@ const User = require('../schema/User');
 exports.logged = (req, res, next) => {
 	try {
 		const token = req.body.token.split('').filter(char => char !== '"').join('');
-		const decodedToken = jwt.verify(token, process.env.TOKEN);
+		const decodedToken = jwt.verify(token, process.env.TOKEN || 'SECRET_TOKEN');
 		const username = decodedToken.username;
 		User.findOne({ username: username })
 		.then(user => {
@@ -46,7 +46,7 @@ exports.login = (req, res, next) => {
 						username: user.username,
 						token: jwt.sign(
 							{ username: user.username },
-							process.env.TOKEN,
+							process.env.TOKEN || 'SECRET_TOKEN',
 							{ expiresIn: '24h' }
 						)
 					});
@@ -80,7 +80,7 @@ exports.signup = (req, res, next) => {
 						username: user.username,
 						token: jwt.sign(
 							{ username: user.username },
-							process.env.TOKEN,
+							process.env.TOKEN || 'SECRET_TOKEN',
 							{ expiresIn: '24h' }
 						)
 					});

@@ -15,5 +15,5 @@ FROM base AS api
 WORKDIR /usr/local/tweeter/api
 COPY ./api ./
 RUN npm install
-EXPOSE 3000
+EXPOSE 3001
 CMD ["nodemon", "server"]

@@ -9,10 +9,24 @@ services:
             - "5173:5173"
         restart: always
 
+    mongo:
+        image: mongo:latest
+        restart: unless-stopped
+        ports:
+            - "27017:27017"
+        volumes:
+            - mongo-data:/data/db
+
     api:
         build:
             context: .
             target: api
         ports:
-            - "3000:3000"
+            - "3001:3001"
         restart: always
+        depends_on:
+            - mongo
+
+volumes:
+    mongo-data:
+        driver: local

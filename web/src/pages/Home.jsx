@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PostTweet from '../components/PostTweet';
 import ZoneTweets from '../components/ZoneTweets';
 import io from 'socket.io-client'
@@ -11,12 +11,22 @@ const Home = () => {
 	
 	useEffect(() => {
 		const getTweet = async () => {
-			const request = await fetch(`${import.meta.env.VITE_API_URL}/tweets`);
-			const response = await request.json();
-			setTweets(response);
-			setLoading(false);
+			fetch(`${import.meta.env.VITE_API_URL}/tweets`)
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Erreur HTTP : ${response.status}`);
+				}
+				return response.json()
+			})
+			.then(data => {
+				setTweets(data)
+				setLoading(false);
+			})
+			.catch(err => {
+				console.log(err);
+			})
 		};
-		
+
 		getTweet();
 		
 		const socket = io(import.meta.env.VITE_API_URL);

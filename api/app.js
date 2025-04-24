@@ -11,13 +11,13 @@ const crud = require('./routes/crud')
 
 const app = express();
 
-mongoose.connect(process.env.MONGODB_ADDRESS,
+mongoose.connect(process.env.MONGODB_ADDRESS || 'mongodb://mongo:27017/tweeter',
 {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })
 .then(() => console.log('Connexion à MongoDB réussie !'))
-.catch(() => console.log('Connexion à MongoDB échouée !'));
+.catch((err) => console.log(err));
 
 app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
