@@ -1,7 +1,7 @@
-# tweeter-api
+# Tweeter API
 
-Tweeter-api est une api fonctionnant avec les deux autres modules de ce repository. Il gère le backend de ces deux derniers, une messagerie inspiré du fameux Twitter où l'on peut écrire, lire et supprimer des messages en temps réel.
+Tweeter API is an API that works with the other two modules in this repository. It handles the backend for both, providing a messaging system inspired by the famous Twitter, where users can write, read, and delete messages in real-time.
 
-Il repose sur Node.js pour le serveur, Express pour gérer les différentes requêtes, socket.io pour que ça soit en temps réel et MongoDB pour la base de données.
+It relies on Node.js for the server, Express to manage various requests, Socket.io for real-time communication, and MongoDB for the database.
 
-Si vous voulez améliorer l'api, je suis complètement ouvert et vous pouvez y aller.
+If you would like to improve the API, I am completely open to contributions, so feel free to get involved!

@@ -1,10 +1,14 @@
-# Tweeter react-native
+# Tweeter React Native
 
-Tweeter react-native est une interface native iOS et Android inspiré de Twitter, il fonctionne avec l'api tweeter-api.
+Tweeter React Native is a native iOS and Android interface inspired by Twitter, functioning with the `tweeter-api`.
 
-Il est possible d'y écrire des messages et de les recevoir en temps réel.
+It allows users to post and receive messages in real-time.
 
-Le site est construit à partir de Expo, lui-même framework de React-native. Pour le lancer, il suffit d'installer les paquets javascripts à partir de npm et expo, de démarrer un émulateur puis de lancer la commande "expo start".\
-*Remarque : la version native de cette application ne se lance pas toute seule avec Docker, les instructions différant d'un système d'exploitation à l'autre.*
+The app is built using Expo, which is a framework for React Native. To get started, simply install the JavaScript packages using npm and Expo, start an emulator, and run the following command:
+```bash
+expo start
+```
 
-Je n'ai pas déployé le projet, le seul moyen d'y accéder est de le faire tourner en local. Si vous voulez améliorer le code, ne vous gênez pas, surtout qu'il y a probablement des bugs notamment quand ça tourne sur Android, étant donné que je l'ai principalement testé sur des émulateurs iOS, comme je suis sur Mac :)
+> *Note: The native version of this application does not run automatically with Docker, as setup instructions differ depending on the operating system.*
+
+I have not deployed the project; the only way to access it is to run it locally. Feel free to contribute to the code, especially since there are likely bugs, particularly when running on Android, as I have mainly tested it on iOS emulators (since I use a Mac) :)

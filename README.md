@@ -1,33 +1,34 @@
 # Tweeter
 
-## Présentation
+## Overview
 
-Tweeter est un réseau social où il est possible de créer son compte et de discuter en temps réel avec les autres utilisateurs dans un fil de discussion global et commun à tous les autres.
+Tweeter is a social network platform that allows users to create an account and engage in real-time discussions within a global feed shared by all users.
 
-## Lancer le projet
+## Running the Project
 
-Pour faire tourner l'application, il vous suffit de lancer la commande suivante, vous veillerez à ce que Docker est correctement installé et configuré sur votre machine et que vous vous situez bien dans le dosssier racine du projet :
-```
+To run the application, simply execute the following command, ensuring that Docker is correctly installed and configured on your machine, and that you are in the root directory of the project:
+```bash
 docker compose up --build
 ```
-Et voilà, ça marche ! Rendez-vous sur `http://localhost:5173/` pour voir ce site tourner.
+And that's it! Visit `http://localhost:5173/` to see the site in action.
 
-*Remarque : vous pouvez ajouter un fichier `api/.env` et y définir `MONGODB_ADDRESS` (par défaut `mongodb://mongo:27017/tweeter`) si vous voulez utiliser un Cluster de MongoDB Atlas par exemple. \
-`TOKEN` afin de redéfinir les tokens d'authentification de l'application. \
-La variable `PORT` peut aussi être définie dans ce fichier mais il n'est pas conseillé de mettre un autre port que 3001, étant donné que le réseau est géré par Docker dans ce cadre.*
+> *Note: You can add a `api/.env` file and define `MONGODB_ADDRESS` (default: `mongodb://mongo:27017/tweeter`) if you wish to use a MongoDB Atlas Cluster.
 
-Vous trouverez davantage d'informations dans les autres `README.md` que vous pouvez trouver dans les dossiers [`api`](api/README.md), [`native`](native/README.md) et [`web`](web/README.md).
+Also, define `TOKEN` to override the authentication tokens used by the application.  
+The `PORT` variable can also be defined in this file, but it is not recommended to use a port other than 3001, as networking is managed by Docker in this setup.*
 
-## Exemples
+You can find more detailed information in the other `README.md` files located in the [`api`](api/README.md), [`native`](native/README.md), and [`web`](web/README.md) directories.
 
-> ![main](examples/main.png)
-> *La page principale lorsqu'on est connecté*
+## Examples
 
-> ![disconnected](examples/disconnected.png)
-> *La page principale lorsque l'on n'est pas connecté*
+> ![main](examples/main.png)  
+> *The main page when logged in*
 
-> ![login](examples/login.png)
-> *Les champs d'entrée pour se connecter ou créer son compte*
+> ![disconnected](examples/disconnected.png)  
+> *The main page when not logged in*
 
-> ![main_dark](examples/main_dark.png)
-> *Un aperçu du mode sombre sur la page principale*
+> ![login](examples/login.png)  
+> *The input fields for logging in or creating an account*
+
+> ![main_dark](examples/main_dark.png)  
+> *A preview of dark mode on the main page*

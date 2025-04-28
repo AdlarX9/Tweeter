@@ -1,9 +1,9 @@
-# Tweeter web
+# Tweeter Web
 
-Tweeter-web est une interface web inspiré de Twitter, il fonctionne avec l'api situé dans le dossier éponyme.
+Tweeter-web is a web interface inspired by Twitter, functioning with the API located in the corresponding folder.
 
-Il est possible d'y écrire des messages et de les recevoir en temps réel.
+It allows users to post and receive messages in real-time.
 
-Le site est construit à partir de React et Vite.
+The site is built using React and Vite.
 
-Si vous voulez améliorer le code, ne vous gênez pas !
+Feel free to contribute to the code if you'd like to improve it!
